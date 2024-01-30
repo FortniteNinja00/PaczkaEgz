@@ -1,0 +1,41 @@
+﻿<Window x:Class="PaczkaEgz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaczkaEgz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <GroupBox Header="Rodzaj przesyłki" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,88,0,0">
+            <StackPanel>
+                <RadioButton Content="Pocztówka" Name="PocztowkaRadio" IsChecked="True" />
+                <RadioButton Content="List" Name="ListRadio"  />
+                <RadioButton Content="Paczka" Name="PaczkaRadio"  />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Dane Adresowe" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,88,0,0">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Ulica z numerem" Width="100" />
+                    <TextBox Name="Ulica" Width="200" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Kod pocztowy" Width="100" />
+                    <TextBox Name="KodPocztowy" Width="200" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Miasto" Width="100" />
+                    <TextBox Name="Miasto" Width="200" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <Button Content="Sprawdź Cenę" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,171,0,0" Click="Sprawdz" Width="103" />
+        <Label Content="Cena: " Name="dupa" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,195,0,0" FontWeight="Bold" FontSize="16" />
+        <Button Content="Zatwierdź" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,0,0" Click="Zatwierdz" Height="22" Width="598" />
+
+        <Image x:Name="Zdj" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="614,88,0,0" Width="150" Height="150"/>
+    </Grid>
+</Window>
